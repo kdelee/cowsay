@@ -47,7 +47,7 @@ To print a text as a certain character:
 ```python
 cowsay.<character>("Text I want to print")
 ```
-A key difference is that the `cowsay.<character>()` function **returns** the string that needs to be printed
+A key update from the original project is that the `cowsay.<character>()` function **returns** the string that needs to be printed
 instead of printing the string itself. This was done so that the string can be stored in a variable. So if you
 wanted to print cowsay messages later, send cowsay messages over a socket connection, or save logs in cowsay, 
 you can do so.
@@ -101,9 +101,9 @@ If you wanted to print a message as `milk`, then you would have to do the follow
 ```
 But you can also do the following:
 ```python
-msg = cowsay.milk("Stop messing up my server!")
-
-server.send(msg.encode())  # This is a sample pseudocode
+# Example
+msg = cowsay.milk("Stop messing with my server!")
+server.send(client=mischievous_client, message=msg)
 ```
 
 If you want to get a list of all functions:
