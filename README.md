@@ -72,7 +72,7 @@ The following characters can be used (no different than the original project):
 
 If you wanted to print a message as `milk`, then you would have to do the following:
 ```
->>> print(cowsay.milk("Hello GitHub!"))
+>>> cowsay.milk("Hello GitHub!")
   _____________
  /             \
 < Hello GitHub! >
@@ -98,6 +98,12 @@ If you wanted to print a message as `milk`, then you would have to do the follow
                  -------------|   
                      | |    | | 
                     <__/    \__>
+```
+But you can also do the following:
+```python
+msg = cowsay.milk("Stop messing up my server!")
+
+server.send(msg.encode())  # This is a sample pseudocode
 ```
 
 If you want to get a list of all functions:
