@@ -18,6 +18,7 @@ ACKNOWLEDGEMENTS = """
 
 __author__ = "Rashid NHM"
 __name__ = "cowsay"
+__license__ = "MIT"
 __version__ = 2.0
 
 max_line_len = 50
@@ -413,7 +414,7 @@ def tux(txt):
     return __say(txt, Characters.tux, left_pad=5)
 
 
-@apologize_if_fail_for("I")
+@apologize_if_fail_for("me")
 def say(txt):
     return __say(txt, Characters.cow, left_pad=10)
 
