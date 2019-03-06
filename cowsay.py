@@ -23,6 +23,14 @@ __version__ = 1.0
 max_line_len = 50
 
 
+class CowString(str):
+    def __init__(self, value):
+        super().__init__()
+
+    def __repr__(self):
+        return super().__str__()
+
+
 class Characters(Enum):
     beavis = """
      __------~~-,
@@ -332,7 +340,7 @@ def __say(txt, base_character, max_line=max_line_len, left_pad=0):
     for line in base_char_lines:
         txt += " " * (max_line + left_pad) + line + "\n"
 
-    return txt
+    return CowString(txt)
 
 
 @apologize_if_fail_for("beavis")
@@ -403,6 +411,11 @@ def turtle(txt):
 @apologize_if_fail_for("tux")
 def tux(txt):
     return __say(txt, Characters.tux, left_pad=5)
+
+
+@apologize_if_fail_for("I")
+def say(txt):
+    return __say(txt, Characters.cow, left_pad=10)
 
 
 def random_character(txt):

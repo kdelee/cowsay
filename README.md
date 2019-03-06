@@ -26,9 +26,8 @@ rm -r cowsay/
 
 ## Usage
 ```python
-import cowsay
-
-cowsay.character_names()  # ['beavis', 'cheese', 'daemon', ..., 'tux']
+>>> import cowsay
+>>> cowsay.say("Hello")
 ```
 
 ---
@@ -46,12 +45,15 @@ cowsay.character_names()
 
 To print a text as a certain character:
 ```python
-print(cowsay.<character>("Text I want to print"))
+cowsay.<character>("Text I want to print")
 ```
 A key difference is that the `cowsay.<character>()` function **returns** the string that needs to be printed
 instead of printing the string itself. This was done so that the string can be stored in a variable. So if you
 wanted to print cowsay messages later, send cowsay messages over a socket connection, or save logs in cowsay, 
 you can do so.
+
+The returned string is of type `CowString` which acts and behaves exactly the same as `str`. The only method that
+is slightly different is the `__repr__` function.
 
 The following characters can be used (no different than the original project):
 - beavis
