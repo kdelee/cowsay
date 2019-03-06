@@ -113,5 +113,5 @@ cowsay.character_functions()  # [<function cowsay.beavis>, <function cowsay.chee
 
 You can also print from a random character:
 ```python
-print(cowsay.random_character("Hello GitHub!"))
+cowsay.random_character("Hello GitHub!")
 ```

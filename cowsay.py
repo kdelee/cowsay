@@ -18,7 +18,7 @@ ACKNOWLEDGEMENTS = """
 
 __author__ = "Rashid NHM"
 __name__ = "cowsay"
-__version__ = 1.0
+__version__ = 2.0
 
 max_line_len = 50
 
