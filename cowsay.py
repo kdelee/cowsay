@@ -297,7 +297,7 @@ def character_functions():
 def process_string(func):
     def string_processor(txt, *args, **kwargs):
         txt = str(txt)
-        lines = [i.strip() for i in txt.split("\n") if len(i) != 0]
+        lines = [i.strip() for i in txt.split("\n") if len(i.strip()) != 0]
 
         ret_txt = ""
 
@@ -345,6 +345,8 @@ def apologize_if_fail_for(character_name):
             try:
                 return func(*args, **kwargs)
             except:
+                if not str(args[0]).strip():
+                    return func(f"You didn't actually give {character_name} anything to say...")
                 return func(f"I was not able to parse and say what you wanted. Please give {character_name} something "
                             f"easier or different")
         return apology
